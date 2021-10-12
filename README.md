@@ -2,13 +2,13 @@ General Utilities For Picat
 -------------
 General utility functions and predicates for Picat programming language. 
 > **Invoke Web service / REST API:**
-bp.shell(X, "curl -X GET https://catfact.ninja/fact")
-X will contain response:
-X = '{"fact":"The first formal cat show was held in England in 1871; in America, in 1895.","length":75}'
+<br>bp.shell(X, "curl -X GET https://catfact.ninja/fact")
+<br>X will contain response:
+<br>X = '{"fact":"The first formal cat show was held in England in 1871; in America, in 1895.","length":75}'
 
 > **Invoke Python program:**
-bp.shell(X, "/usr/bin/python3 myprogram.py")
-X will contain output.
+<br>bp.shell(X, "/usr/bin/python3 myprogram.py")
+<br>X will contain output.
 
 > **Compile as below (tested in Pop Linux):**
 <br>$ cd emu
