@@ -25,6 +25,33 @@ Code Form is retained. The copyright holders, developers,
 and distributors will not be held liable for any direct or
 indirect damages.
 
+> **Files Added/Modified:**
+3 files added/modified: emu/genutils/genutils.c, emu/Makefile and emu/cpreds.c
+
+Makefile (file path in git repo: emu/Makefile):-
+Below lines added/modified:
+
+GENUTILS_FLAGS = -c -O3 -I. -Igenutils
+GENUTILS_OBJ = genutils.o
+
+picat : $(OBJ) $(ESPRESSO_OBJ) $(GENUTILS_OBJ) $(KISSAT_OBJ)  
+    $(CPP) -o picat $(OBJ) $(ESPRESSO_OBJ) $(GENUTILS_OBJ) $(KISSAT_OBJ) $(LFLAGS)  
+
+genutils.o : genutils/genutils.c
+    $(CC) $(GENUTILS_FLAGS) -o genutils.o genutils/genutils.c
+
+cpreds.c file (file path in git repo: emu/cpreds.c):-
+Below lines added/modified:
+
+// Added
+extern int p();
+extern int shell();
+
+// Added
+insert_cpred("p", 2, p);
+insert_cpred("shell", 2, shell);
+
+
 Picat Quickstart
 -------------
 Picat is a logic programming language based on B-Prolog that implements imperative and functional programming language features. For detailed information please refer http://www.picat-lang.org/
