@@ -10,6 +10,11 @@ X = '{"fact":"The first formal cat show was held in England in 1871; in America,
 bp.shell(X, "/usr/bin/python3 myprogram.py")
 X will contain output.
 
+> **Compile as below (tested in Pop Linux):**
+$ cd emu
+$ make -f Makefile
+$ ./picat
+
 The C source files (genutils/genutils.c, etc.) for these functions and predicates are released for anyone to use, modify and distribute freely for any purpose, including commercial purpose, under the Mozilla Public License, v. 2.0:
 
 http://mozilla.org/MPL/2.0/. 
