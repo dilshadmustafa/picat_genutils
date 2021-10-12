@@ -11,9 +11,9 @@ bp.shell(X, "/usr/bin/python3 myprogram.py")
 X will contain output.
 
 > **Compile as below (tested in Pop Linux):**
-$ cd emu
-$ make -f Makefile
-$ ./picat
+<br>$ cd emu
+<br>$ make -f Makefile
+<br>$ ./picat
 
 The C source files (genutils/genutils.c, etc.) for these functions and predicates are released for anyone to use, modify and distribute freely for any purpose, including commercial purpose, under the Mozilla Public License, v. 2.0:
 
