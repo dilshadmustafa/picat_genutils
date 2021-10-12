@@ -14,42 +14,7 @@
 #include <ctype.h>
 
 p(){
-TERM a1, a2, a, b, c, f1, l1, f12;
-char *name_ptr;
-/*
-prepare Picat terms */
-a1 = picat_get_call_arg(1, 2);
-/* first argument */
-a2 = picat_get_call_arg(2, 2);
-/* second argument */
-a = picat_build_atom("a");
-b = picat_build_atom("b");
-c = picat_build_atom("c");
-f1 = picat_build_structure("f", 1); /* f(a) */
-picat_unify(picat_get_arg(1, f1), a);
-l1 = picat_build_list();
-/* [1] */
-picat_unify(picat_get_car(l1), picat_build_integer(1));
-picat_unify(picat_get_cdr(l1), picat_build_nil());
-
-f12 = picat_build_float(1.2);
-/* 1.2 */
-/* code for the rules */
-if (!picat_is_atom(a1))
-return PICAT_FALSE;
-name_ptr = picat_get_atom_name(a1);
-switch (*name_ptr){
-case 'a':
-return (picat_unify(a1, a) ?
-picat_unify(a2, f1) : PICAT_FALSE);
-case 'b':
-return (picat_unify(a1, b) ?
-picat_unify(a2, l1) : PICAT_FALSE);
-case 'c':
-return (picat_unify(a1, c) ?
-picat_unify(a2, f12) : PICAT_FALSE);
-default: return PICAT_FALSE;
-}
+	return PICAT_FALSE;
 }
 
 char* replace_char(char* str, char find, char replace){
